@@ -1,0 +1,21 @@
+﻿@using WebStore.Models;
+@model Phone
+@{
+    ViewBag.Title = "DetailPhone";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="grid_1_of_4 images_1_of_4 products-info">
+    <img src="@Url.Content("~/ImagePhone/"+Model.CoverImage)" width="100" height="150" alt="image" />
+    <a href="single.html">@Model.PhoneName</a>
+    <h3>@String.Format("{0:0,0}",@Model.Price) đ </h3>
+    <p>Decription: @Model.Description</p>
+    <p>SoLuong: @Model.SoLuong</p>
+    <p>Hang: @ViewBag.TenSanPham</p>
+    <p>NSX: @ViewBag.NSX</p>
+    <ul>
+        <li><a class="cart" href="single.html"> </a></li>
+    </ul>
+
+</div>
+

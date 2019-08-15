@@ -1,0 +1,16 @@
+﻿@using WebStore.Models;
+@model List<Phone>
+
+@foreach (var item in Model){
+    <div class="grid_1_of_4 images_1_of_4 products-info">
+        <img src="@Url.Content("~/ImagePhone/"+item.CoverImage)"width="100" height="100" alt="image"/>
+        <a href="single.html">@item.PhoneName</a>
+        <h3>@String.Format("{0:0,0}",item.Price) đ </h3>
+        <ul>
+            <li><a class="cart" href="single.html"> </a></li>
+            <li><a class="i" href="@Url.Action("DetailPhone","Product", new {@MaPhone = item.PhoneId})" ></a></li>
+        </ul>
+    </div>
+}
+
+
